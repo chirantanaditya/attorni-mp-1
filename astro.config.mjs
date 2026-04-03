@@ -2,7 +2,11 @@
 import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
+// Set PUBLIC_SITE_URL in deploy env (e.g. Cloudflare Pages) if the live URL differs.
+const site = process.env.PUBLIC_SITE_URL || "https://attorni.ai";
+
 export default defineConfig({
+	site,
 	fonts: [
 		{
 			name: "Vogun",

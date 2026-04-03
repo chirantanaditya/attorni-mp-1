@@ -1,5 +1,11 @@
 ---
 import { Font } from "astro:assets";
+
+const title = "Attorni — AI-Powered Indian Kanoon Search";
+const description =
+	"Find the right Indian Kanoon judgments with AI—precise, context-aware case law tailored to your legal issue.";
+const ogImage = new URL("/og-image.png", Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -7,9 +13,35 @@ import { Font } from "astro:assets";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="canonical" href={canonicalURL.href} />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Attorni" />
+		<meta property="og:url" content={canonicalURL.href} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage.href} />
+		<meta property="og:image:width" content="1024" />
+		<meta property="og:image:height" content="537" />
+		<meta
+			property="og:image:alt"
+			content="Attorni — Find the Right Judgments. Not Just More Judgments."
+		/>
+		<meta property="og:locale" content="en_IN" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage.href} />
+		<meta
+			name="twitter:image:alt"
+			content="Attorni — Find the Right Judgments. Not Just More Judgments."
+		/>
+
 		<Font cssVariable="--font-vogun" preload />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +49,7 @@ import { Font } from "astro:assets";
 			href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Attorni — AI-Powered Indian Kanoon Search</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<a class="skip-link" href="#main-content">Skip to main content</a>
@@ -36,6 +68,7 @@ import { Font } from "astro:assets";
 		--stone-500: #78716c;
 		--stone-800: #292524;
 		--stone-900: #1c1917;
+		--stone-950: #0c0a09;
 		--slate-border: #8e98a8;
 		--ink: #0f172a;
 		--nav-cta: #44403b;
@@ -62,8 +95,8 @@ import { Font } from "astro:assets";
 		margin: 0;
 		width: 100%;
 		min-height: 100%;
-		background: #fff;
-		color: #000;
+		background: var(--stone-100);
+		color: var(--stone-950);
 		font-family: var(--font-body);
 		-webkit-tap-highlight-color: transparent;
 	}
