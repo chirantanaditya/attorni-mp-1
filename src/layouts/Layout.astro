@@ -1,0 +1,89 @@
+---
+import { Font } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<Font cssVariable="--font-vogun" preload />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Attorni — AI-Powered Indian Kanoon Search</title>
+	</head>
+	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: light;
+		--stone-50: #fafaf9;
+		--stone-100: #f5f5f4;
+		--stone-200: #e7e5e4;
+		--stone-300: #d6d3d1;
+		--stone-400: #a6a09b;
+		--stone-500: #78716c;
+		--stone-800: #292524;
+		--stone-900: #1c1917;
+		--slate-border: #8e98a8;
+		--ink: #0f172a;
+		--nav-cta: #44403b;
+		--font-display: Georgia, "Times New Roman", serif;
+		--font-body: "Rethink Sans", system-ui, sans-serif;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-vogun);
+		font-weight: 500;
+		font-style: normal;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+		background: #fff;
+		color: #000;
+		font-family: var(--font-body);
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.skip-link {
+		position: absolute;
+		left: -9999px;
+		top: 0;
+		z-index: 100;
+		padding: 0.75rem 1rem;
+		background: var(--stone-900);
+		color: var(--stone-50);
+		text-decoration: none;
+		font-weight: 600;
+		border-radius: 0 0 4px 0;
+	}
+
+	.skip-link:focus {
+		left: 0;
+		outline: 2px solid #fff;
+		outline-offset: 2px;
+	}
+</style>

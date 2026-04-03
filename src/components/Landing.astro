@@ -1,0 +1,1143 @@
+---
+const imgHeroMain = "/images/hero-main.jpg";
+const imgHeroSide = "/images/hero-side.jpg";
+const imgLogoKanoon = "/images/logo-kanoon.png";
+const imgLogoChatgpt = "/images/logo-chatgpt.png";
+const imgLogoGemini = "/images/gemini-logo.png";
+const logoMark = "/logo.svg";
+---
+
+<div class="page">
+	<header class="nav">
+		<div class="nav__inner">
+			<a class="brand" href="/" aria-label="Attorni home">
+				<img
+					class="brand__mark"
+					src={logoMark}
+					alt=""
+					width="32"
+					height="32"
+					loading="eager"
+					decoding="async"
+					fetchpriority="high"
+				/>
+				<span class="brand__name">Attorni</span>
+			</a>
+			<a class="btn btn--nav" href="#cta">Early Access</a>
+		</div>
+	</header>
+
+	<main id="main-content">
+		<section class="hero section" aria-labelledby="hero-heading">
+			<div class="hero__copy">
+				<p class="tagline">AI-Powered Indian Kanoon Search</p>
+				<h1 id="hero-heading" class="display hero__title">
+					Find the Right Judgments. Not Just More Judgments.
+				</h1>
+				<p class="lede">
+					Stop wasting hours scrolling through irrelevant case laws on Indian Kanoon.
+					<br />
+					Get precise, context-aware judgments tailored to your legal issue—instantly.
+				</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary" href="#cta">Get Access</a>
+				</div>
+			</div>
+			<div class="hero__media">
+				<div class="hero__shot hero__shot--main">
+					<img
+						src={imgHeroMain}
+						alt="Attorni interface showing a legal document with analysis and reply field"
+						width="761"
+						height="496"
+						loading="eager"
+						decoding="async"
+						fetchpriority="high"
+					/>
+				</div>
+				<div class="hero__shot hero__shot--side">
+					<img
+						src={imgHeroSide}
+						alt="Attorni summary view with ratio decidendi and relevance sections"
+						width="371"
+						height="496"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="section compare" id="compare" aria-labelledby="compare-heading">
+			<div class="section__intro">
+				<h2 id="compare-heading" class="display section__title">
+					Why Not Just Use Existing Tools?
+				</h2>
+				<div class="section__body">
+					<p>Legal research is too critical to rely on generic or outdated approaches.</p>
+					<p>Here’s how Attorni compares:</p>
+				</div>
+			</div>
+
+			<div class="tabs" data-tabs>
+				<div class="tabs__list" role="tablist" aria-label="Product comparisons">
+					<button
+						type="button"
+						class="tabs__tab is-active"
+						role="tab"
+						id="tab-kanoon"
+						aria-selected="true"
+						aria-controls="panel-kanoon"
+						data-tab="kanoon"
+					>
+						<img src={imgLogoKanoon} alt="" width="55" height="24" class="tabs__logo" />
+						<span class="tabs__vs">vs</span>
+						<span class="tabs__wordmark">Attorni</span>
+					</button>
+					<button
+						type="button"
+						class="tabs__tab"
+						role="tab"
+						id="tab-chatgpt"
+						aria-selected="false"
+						aria-controls="panel-chatgpt"
+						tabindex="-1"
+						data-tab="chatgpt"
+					>
+						<img src={imgLogoChatgpt} alt="" width="24" height="24" class="tabs__logo tabs__logo--square" />
+						<span class="tabs__vs">vs</span>
+						<span class="tabs__wordmark">Attorni</span>
+					</button>
+					<button
+						type="button"
+						class="tabs__tab"
+						role="tab"
+						id="tab-gemini"
+						aria-selected="false"
+						aria-controls="panel-gemini"
+						tabindex="-1"
+						data-tab="gemini"
+						aria-label="Google Gemini vs Attorni"
+					>
+						<span class="tabs__gemini" aria-hidden="true">
+							<img
+								class="tabs__gemini-logo"
+								src={imgLogoGemini}
+								alt=""
+								width="24"
+								height="24"
+								loading="lazy"
+								decoding="async"
+							/>
+							<span class="tabs__gemini-text">Gemini</span>
+						</span>
+						<span class="tabs__vs">vs</span>
+						<span class="tabs__wordmark">Attorni</span>
+					</button>
+				</div>
+
+				<div
+					class="tabs__panel is-active"
+					role="tabpanel"
+					id="panel-kanoon"
+					aria-labelledby="tab-kanoon"
+					data-panel="kanoon"
+				>
+					<div class="panel__intro">
+						<h3 class="panel__title">Indian Kanoon vs Attorni</h3>
+						<p class="panel__lede">
+							Search on Indian Kanoon depends on keywords, so lawyers have to go through many results to find
+							what’s useful. Attorni lets you describe the facts of your case and shows judgments that match
+							those facts. This reduces time spent on research and makes it easier to find relevant precedents.
+						</p>
+					</div>
+					<div class="table-wrap">
+						<div class="compare-mobile-colheads" aria-hidden="true">
+							<span class="compare-mobile-colheads__cell">Indian Kanoon Search</span>
+							<span class="compare-mobile-colheads__cell">Attorni</span>
+						</div>
+						<table class="compare-table">
+							<thead>
+								<tr>
+									<th scope="col">Criteria</th>
+									<th scope="col">Indian Kanoon Search</th>
+									<th scope="col">Attorni</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Search Method</th>
+									<td data-label="Indian Kanoon Search">
+										<span class="compare-mh" aria-hidden="true">Indian Kanoon Search</span>
+										<span class="compare-value">Keyword-based</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Context + fact-based</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Relevance</th>
+									<td data-label="Indian Kanoon Search">
+										<span class="compare-mh" aria-hidden="true">Indian Kanoon Search</span>
+										<span class="compare-value">Mixed, often broad</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Highly targeted</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Time Taken</th>
+									<td data-label="Indian Kanoon Search">
+										<span class="compare-mh" aria-hidden="true">Indian Kanoon Search</span>
+										<span class="compare-value">2–4 hours refining</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Minutes</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Fact Matching</th>
+									<td data-label="Indian Kanoon Search">
+										<span class="compare-mh" aria-hidden="true">Indian Kanoon Search</span>
+										<span class="compare-value">Not supported</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Core strength</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Result Quality</th>
+									<td data-label="Indian Kanoon Search">
+										<span class="compare-mh" aria-hidden="true">Indian Kanoon Search</span>
+										<span class="compare-value">Requires manual filtering</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Curated judgments</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div
+					class="tabs__panel"
+					role="tabpanel"
+					id="panel-chatgpt"
+					aria-labelledby="tab-chatgpt"
+					hidden
+					data-panel="chatgpt"
+				>
+					<div class="panel__intro">
+						<h3 class="panel__title">ChatGPT vs Attorni</h3>
+						<p class="panel__lede">
+							General AI tools move fast, but legal work needs verified Indian case law—not plausible-sounding
+							answers. Here’s how ChatGPT stacks up against Attorni.
+						</p>
+					</div>
+					<div class="table-wrap">
+						<div class="compare-mobile-colheads" aria-hidden="true">
+							<span class="compare-mobile-colheads__cell">ChatGPT</span>
+							<span class="compare-mobile-colheads__cell">Attorni</span>
+						</div>
+						<table class="compare-table">
+							<thead>
+								<tr>
+									<th scope="col">Criteria</th>
+									<th scope="col">ChatGPT</th>
+									<th scope="col">Attorni</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Legal Accuracy</th>
+									<td data-label="ChatGPT">
+										<span class="compare-mh" aria-hidden="true">ChatGPT</span>
+										<span class="compare-value">Generalized</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Legal-specific</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Indian Case Law Access</th>
+									<td data-label="ChatGPT">
+										<span class="compare-mh" aria-hidden="true">ChatGPT</span>
+										<span class="compare-value">Not reliable</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Directly mapped</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Citations</th>
+									<td data-label="ChatGPT">
+										<span class="compare-mh" aria-hidden="true">ChatGPT</span>
+										<span class="compare-value">May hallucinate</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Real, verifiable</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Court-Ready Use</th>
+									<td data-label="ChatGPT">
+										<span class="compare-mh" aria-hidden="true">ChatGPT</span>
+										<span class="compare-value">Risky</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Reliable</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div
+					class="tabs__panel"
+					role="tabpanel"
+					id="panel-gemini"
+					aria-labelledby="tab-gemini"
+					hidden
+					data-panel="gemini"
+				>
+					<div class="panel__intro">
+						<h3 class="panel__title">Google Gemini vs Attorni</h3>
+						<p class="panel__lede">
+							Gemini is strong at general reasoning, but litigation turns on the right precedents from Indian
+							courts. Compare how it handles legal context next to Attorni.
+						</p>
+					</div>
+					<div class="table-wrap">
+						<div class="compare-mobile-colheads" aria-hidden="true">
+							<span class="compare-mobile-colheads__cell">Gemini</span>
+							<span class="compare-mobile-colheads__cell">Attorni</span>
+						</div>
+						<table class="compare-table">
+							<thead>
+								<tr>
+									<th scope="col">Criteria</th>
+									<th scope="col">Gemini</th>
+									<th scope="col">Attorni</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Legal Context Understanding</th>
+									<td data-label="Gemini">
+										<span class="compare-mh" aria-hidden="true">Gemini</span>
+										<span class="compare-value">General</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Legal-specific</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Fact Pattern Matching</th>
+									<td data-label="Gemini">
+										<span class="compare-mh" aria-hidden="true">Gemini</span>
+										<span class="compare-value">
+											<span class="sr-only">No.</span>
+											<span class="compare-glyph compare-glyph--bad compare-glyph--solo" aria-hidden="true">✗</span>
+										</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">
+											<span class="sr-only">Yes.</span>
+											<span class="compare-glyph compare-glyph--good compare-glyph--solo" aria-hidden="true">✓</span>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Indian Judiciary Focus</th>
+									<td data-label="Gemini">
+										<span class="compare-mh" aria-hidden="true">Gemini</span>
+										<span class="compare-value">Limited</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Built for India</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Case Law Retrieval</th>
+									<td data-label="Gemini">
+										<span class="compare-mh" aria-hidden="true">Gemini</span>
+										<span class="compare-value">Inconsistent</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Structured &amp; precise</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Drafting Support</th>
+									<td data-label="Gemini">
+										<span class="compare-mh" aria-hidden="true">Gemini</span>
+										<span class="compare-value">Generic</span>
+									</td>
+									<td data-label="Attorni">
+										<span class="compare-mh" aria-hidden="true">Attorni</span>
+										<span class="compare-value">Litigation-focused</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta section" id="cta" aria-labelledby="cta-heading">
+			<h2 id="cta-heading" class="display cta__title">
+				Search Like You Explain a Case to a Junior
+			</h2>
+			<a class="btn btn--cta" href="mailto:hello@attorni.com?subject=Attorni%20early%20access">Try For Free</a>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner">
+			<a class="brand" href="/" aria-label="Attorni home">
+				<img class="brand__mark" src={logoMark} alt="" width="32" height="32" loading="lazy" decoding="async" />
+				<span class="brand__name">Attorni</span>
+			</a>
+			<a class="footer__link" href="mailto:hello@attorni.com">Email Us</a>
+		</div>
+	</footer>
+</div>
+
+<script is:inline>
+	(() => {
+		const root = document.querySelector("[data-tabs]");
+		if (!root) return;
+		const tabs = Array.from(root.querySelectorAll('[role="tab"]'));
+		const panels = Array.from(root.querySelectorAll('[role="tabpanel"]'));
+
+		function activate(id) {
+			tabs.forEach((tab) => {
+				const on = tab.dataset.tab === id;
+				tab.classList.toggle("is-active", on);
+				tab.setAttribute("aria-selected", on ? "true" : "false");
+				tab.tabIndex = on ? 0 : -1;
+			});
+			panels.forEach((panel) => {
+				const on = panel.dataset.panel === id;
+				panel.classList.toggle("is-active", on);
+				panel.hidden = !on;
+			});
+		}
+
+		let i = 0;
+		tabs.forEach((tab, idx) => {
+			tab.addEventListener("click", () => {
+				i = idx;
+				activate(tab.dataset.tab || "");
+			});
+			tab.addEventListener("keydown", (e) => {
+				if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+					e.preventDefault();
+					const dir = e.key === "ArrowRight" ? 1 : -1;
+					i = (idx + dir + tabs.length) % tabs.length;
+					activate(tabs[i].dataset.tab || "");
+					tabs[i].focus();
+				}
+				if (e.key === "Home") {
+					e.preventDefault();
+					i = 0;
+					activate(tabs[0].dataset.tab || "");
+					tabs[0].focus();
+				}
+				if (e.key === "End") {
+					e.preventDefault();
+					i = tabs.length - 1;
+					activate(tabs[i].dataset.tab || "");
+					tabs[i].focus();
+				}
+			});
+		});
+	})();
+</script>
+
+<style>
+	.page {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 1rem 2rem;
+	}
+
+	@media (min-width: 768px) {
+		.page {
+			padding: 0 2rem 3rem;
+		}
+	}
+
+	.display {
+		line-height: 1.2;
+		letter-spacing: -0.01em;
+		text-wrap: balance;
+		margin: 0;
+	}
+
+	.nav {
+		padding: 2rem 0 1rem;
+	}
+
+	.nav__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		max-width: 1152px;
+		margin: 0 auto;
+	}
+
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		text-decoration: none;
+		color: inherit;
+		min-width: 0;
+	}
+
+	.brand__mark {
+		display: block;
+		flex-shrink: 0;
+	}
+
+	.brand__name {
+		font-family: var(--font-display);
+		font-size: 1.625rem;
+		line-height: 1;
+		white-space: nowrap;
+	}
+
+	.btn {
+		touch-action: manipulation;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5625rem 0.8125rem;
+		font-family: var(--font-body);
+		font-size: 0.8125rem;
+		font-weight: 500;
+		line-height: 1.2;
+		text-decoration: none;
+		border-radius: 4px;
+		border: 1px solid transparent;
+		cursor: pointer;
+		transition:
+			background-color 0.15s ease,
+			color 0.15s ease,
+			border-color 0.15s ease,
+			box-shadow 0.15s ease;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.btn {
+			transition: none;
+		}
+	}
+
+	.btn:focus-visible {
+		outline: 2px solid var(--stone-900);
+		outline-offset: 2px;
+	}
+
+	.btn--nav {
+		background: var(--nav-cta);
+		color: var(--stone-50);
+	}
+
+	.btn--nav:hover {
+		filter: brightness(1.08);
+	}
+
+	.btn--primary {
+		background: #000;
+		color: #fff;
+		border-color: #000;
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	.btn--primary:hover {
+		background: var(--stone-800);
+		border-color: var(--stone-800);
+	}
+
+	.btn--cta {
+		background: var(--stone-300);
+		color: #000;
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	.btn--cta:hover {
+		background: var(--stone-200);
+	}
+
+	.section {
+		padding: 3rem 0;
+	}
+
+	@media (min-width: 768px) {
+		.section {
+			padding: 4rem 0;
+		}
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 3rem;
+		padding-top: 1rem;
+	}
+
+	@media (min-width: 1024px) {
+		.hero {
+			gap: 5rem;
+		}
+	}
+
+	.hero__copy {
+		max-width: 48rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.tagline {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	.hero__title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+	}
+
+	.lede {
+		margin: 0;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		max-width: 42rem;
+	}
+
+	.hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	.hero__media {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		width: 100%;
+		max-width: 1152px;
+		align-items: stretch;
+	}
+
+	@media (min-width: 900px) {
+		.hero__media {
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	}
+
+	.hero__shot {
+		border: 3px solid var(--ink);
+		border-radius: 16px;
+		overflow: hidden;
+		background: var(--stone-50);
+	}
+
+	.hero__shot--main {
+		flex: 1.4;
+		min-height: 200px;
+	}
+
+	.hero__shot--side {
+		flex: 0.6;
+		padding: 1rem;
+		background: #faf9f6;
+		min-height: 200px;
+	}
+
+	@media (max-width: 1024px) {
+		.hero__shot--side {
+			display: none;
+		}
+	}
+
+	.hero__shot img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 12px;
+	}
+
+	.compare .section__intro {
+		max-width: 55rem;
+		margin-bottom: 2rem;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.section__title {
+		font-size: clamp(2rem, 4vw, 3.5rem);
+		margin-bottom: 1.5rem;
+	}
+
+	.section__body {
+		font-size: 1.125rem;
+		line-height: 1.5;
+		color: #000;
+	}
+
+	.section__body p {
+		margin: 0 0 0.5rem;
+	}
+
+	.tabs__list {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--slate-border);
+		border-radius: 0;
+	}
+
+	@media (min-width: 640px) {
+		.tabs__list {
+			flex-direction: row;
+		}
+	}
+
+	.tabs__tab {
+		touch-action: manipulation;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		padding: 1.5rem 1rem;
+		font: inherit;
+		background: #fff;
+		border: none;
+		border-bottom: 1px solid var(--slate-border);
+		cursor: pointer;
+		color: inherit;
+		min-height: 3.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.tabs__tab {
+			border-bottom: none;
+			border-right: 1px solid var(--slate-border);
+		}
+
+		.tabs__tab:last-child {
+			border-right: none;
+		}
+	}
+
+	.tabs__tab.is-active {
+		background: var(--stone-200);
+	}
+
+	.tabs__tab:focus-visible {
+		outline: 2px solid var(--stone-900);
+		outline-offset: -2px;
+		z-index: 1;
+	}
+
+	.tabs__tab:hover:not(.is-active) {
+		background: var(--stone-50);
+	}
+
+	.tabs__vs {
+		font-size: 1.5rem;
+		line-height: 1;
+	}
+
+	.tabs__logo {
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+
+	.tabs__logo--square {
+		width: 24px;
+		height: 24px;
+	}
+
+	.tabs__wordmark {
+		font-family: var(--font-display);
+		font-size: 1.125rem;
+		line-height: 1;
+		font-weight: 400;
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+
+	.tabs__panel {
+		border: 1px solid var(--stone-400);
+		border-top: none;
+		padding: 0;
+	}
+
+	.panel__intro {
+		padding: 2rem 1rem;
+	}
+
+	.panel__title {
+		font-size: 2rem;
+		line-height: 1.2;
+		margin: 0 0 1rem;
+		text-wrap: balance;
+	}
+
+	.panel__lede {
+		margin: 0;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		max-width: 54rem;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	.compare-glyph {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 1.35em;
+		margin-right: 0.4rem;
+		font-weight: 700;
+		line-height: 1;
+		vertical-align: -0.05em;
+	}
+
+	.compare-glyph--good {
+		color: #4ade80;
+	}
+
+	.compare-glyph--bad {
+		color: #f87171;
+	}
+
+	.compare-glyph--solo {
+		margin-right: 0;
+	}
+
+	.tabs__gemini {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		flex-shrink: 0;
+	}
+
+	.tabs__gemini-logo {
+		display: block;
+		width: 24px;
+		height: 24px;
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+
+	.tabs__gemini-text {
+		font-size: 0.9375rem;
+		font-weight: 600;
+		white-space: nowrap;
+	}
+
+	.table-wrap {
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.compare-table {
+		width: 100%;
+		border-collapse: collapse;
+		font-variant-numeric: tabular-nums;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		min-width: 520px;
+	}
+
+	.compare-table th,
+	.compare-table td {
+		padding: 1rem;
+		text-align: center;
+		border: 1px solid var(--stone-500);
+		vertical-align: middle;
+	}
+
+	.compare-table thead th {
+		font-weight: 700;
+		background: var(--stone-200);
+	}
+
+	.compare-table thead th:nth-child(2) {
+		background: var(--stone-100);
+	}
+
+	.compare-table thead th:nth-child(3) {
+		background: var(--stone-50);
+	}
+
+	.compare-table tbody th {
+		font-weight: 400;
+		background: var(--stone-200);
+		text-align: center;
+	}
+
+	.compare-table tbody td:nth-child(2) {
+		background: var(--stone-100);
+	}
+
+	.compare-table tbody td:nth-child(3) {
+		background: var(--stone-50);
+	}
+
+	/* Criteria column: no vertical cell borders */
+	.compare-table thead th:nth-child(1),
+	.compare-table tbody th {
+		border-left: none;
+		border-right: none;
+	}
+
+	/* Attorni column: no vertical cell borders */
+	.compare-table thead th:nth-child(3),
+	.compare-table tbody td:nth-child(3) {
+		border-left: none;
+		border-right: none;
+	}
+
+	.compare-table tbody tr:last-child th:first-child,
+	.compare-table tbody tr:last-child td:first-child {
+		border-bottom-left-radius: 12px;
+	}
+
+	.compare-table tbody tr:last-child td:last-child {
+		border-bottom-right-radius: 12px;
+	}
+
+	/* Desktop: mobile-only column headers stay in DOM for narrow layout */
+	.compare-mh {
+		display: none;
+	}
+
+	.compare-value {
+		display: inline;
+	}
+
+	/* Shown only on mobile; one shared header per table */
+	.compare-mobile-colheads {
+		display: none;
+	}
+
+	/* Mobile: shared col header once, then [criteria row][two values] per criterion; square corners */
+	@media (max-width: 478px) {
+		.table-wrap {
+			overflow-x: visible;
+			border: 1px solid var(--stone-500);
+			border-radius: 0;
+		}
+
+		.compare-mobile-colheads {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			border-bottom: 1px solid var(--stone-500);
+		}
+
+		.compare-mobile-colheads__cell {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 1rem;
+			font-weight: 700;
+			font-size: 1rem;
+			line-height: 1.3;
+			text-align: center;
+			background: #fff;
+			color: #000;
+			border: none;
+			border-right: 1px solid var(--stone-500);
+		}
+
+		.compare-mobile-colheads__cell:last-child {
+			border-right: none;
+		}
+
+		.compare-table {
+			display: block;
+			min-width: 0;
+		}
+
+		.compare-table thead {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border-width: 0;
+		}
+
+		.compare-table tbody {
+			display: block;
+		}
+
+		.compare-table tbody tr {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			margin: 0;
+			border: none;
+			border-radius: 0;
+			overflow: visible;
+			border-bottom: 1px solid var(--stone-500);
+		}
+
+		.compare-table tbody tr:last-child {
+			border-bottom: none;
+		}
+
+		.compare-table tbody td {
+			display: contents;
+			padding: 0;
+			border: none;
+		}
+
+		.compare-table tbody .compare-mh {
+			display: none;
+		}
+
+		.compare-table tbody th {
+			grid-column: 1 / -1;
+			grid-row: 1;
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			text-align: left;
+			font-weight: 400;
+			font-size: 1.0625rem;
+			line-height: 1.45;
+			background: var(--stone-200);
+			border: none;
+			border-bottom: 1px solid var(--stone-500);
+			padding: 1rem;
+		}
+
+		.compare-table tbody tr:not(:first-child) th {
+			border-top: 1px solid var(--stone-500);
+		}
+
+		.compare-value {
+			display: block;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 1rem;
+			font-weight: 400;
+			font-size: 1.0625rem;
+			line-height: 1.45;
+			text-align: center;
+			border: none;
+		}
+
+		.compare-table tbody tr > td:nth-child(2) .compare-value {
+			grid-column: 1;
+			grid-row: 2;
+			background: var(--stone-100);
+			border-right: 1px solid var(--stone-500);
+		}
+
+		.compare-table tbody tr > td:nth-child(3) .compare-value {
+			grid-column: 2;
+			grid-row: 2;
+			background: var(--stone-50);
+			border-right: none;
+		}
+	}
+
+	.cta {
+		margin-top: 2rem;
+		padding: 5rem 1.5rem;
+		background: var(--stone-900);
+		border: 1px solid var(--stone-900);
+		border-radius: 16px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.cta__title {
+		color: var(--stone-100);
+		font-size: clamp(2rem, 4vw, 3.5rem);
+		max-width: 52rem;
+	}
+
+	.footer {
+		padding: 3.5rem 0 2rem;
+		max-width: 1152px;
+		margin: 0 auto;
+	}
+
+	.footer__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.footer__link {
+		font-size: 1.125rem;
+		color: inherit;
+		text-underline-offset: 0.2em;
+	}
+
+	.footer__link:focus-visible {
+		outline: 2px solid var(--stone-900);
+		outline-offset: 2px;
+		border-radius: 2px;
+	}
+</style>

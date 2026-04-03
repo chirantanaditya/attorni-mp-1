@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "figma-generate-design": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "computedHash": "7ae46baafca21340b75625c36fc908485ebcaad2bfeea372e2be472598bc1522"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "d8e7d3afe37dcc8a97b99ffb5afdb4d0919ae0092ea8b68f44eb201f035e33ac"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Cloudflare Pages — static Astro output
+# Deploy: bun run build && bunx wrangler pages deploy
+# Or connect this repo in the Pages dashboard (build: bun run build, output: dist).
+
+name = "attorni-landing"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-04-01"
